@@ -1,0 +1,61 @@
+body,
+#root,
+.layout {
+  min-height: 100vh;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  margin: 1em auto;
+  align-content: center;
+  justify-content: center;
+}
+
+h1 {
+  background-image: url('https://github.com/satoftegaard/eco-hostel/blob/master/src/logo.png?raw=true');
+  height: 800px;
+  width: 350px;
+}
+
+header {
+  nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 780px;
+    // align-items: center;
+    background-image: url('https://github.com/satoftegaard/eco-hostel/blob/master/src/map.png?raw=true');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+      flex-direction: row;
+      font-family: 'helvetica', sans-serif;
+      font-size: 24px;
+      display: flex;
+
+      li {
+        background-image: url('https://github.com/satoftegaard/eco-hostel/blob/master/src/profile-icon.png?raw=true');
+        background-repeat: no-repeat;
+        margin-top: 3em;
+        height: 75px;
+        width: 70px;
+        padding-right: 50px;
+      }
+
+      &.nav li {
+        margin-left: 20px;
+        text-decoration: none;
+        font-size: 15px;
+        list-style: none;
+      }
+    }
+  }
+}
