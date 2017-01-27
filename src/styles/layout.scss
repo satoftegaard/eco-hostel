@@ -42,7 +42,7 @@ header {
       display: flex;
 
       li {
-        background-image: url('https://github.com/satoftegaard/eco-hostel/blob/master/src/profile-icon.png?raw=true');
+        background-image: url('https://github.com/satoftegaard/eco-hostel/blob/master/profile.gif?raw=true');
         background-repeat: no-repeat;
         margin-top: 3em;
         height: 75px;
@@ -57,5 +57,22 @@ header {
         list-style: none;
       }
     }
+  }
+}
+
+main {
+  padding-left: 80px;
+  padding-right: 80px;
+
+  h1 {
+    background-image: url('https://github.com/satoftegaard/eco-hostel/blob/master/whoweare.png?raw=true');
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 400px;
+  }
+
+  p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
   }
 }
