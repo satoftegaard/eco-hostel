@@ -3,3 +3,112 @@
     margin-top: 0;
   }
 }
+
+main {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex: 1;
+  flex-wrap: wrap;
+  margin: 1em auto;
+  align-content: center;
+  padding-left: 80px;
+  padding-right: 80px;
+  width: 850px;
+
+  h1 {
+    background-image: url('https://github.com/satoftegaard/eco-hostel/blob/master/whoweare.png?raw=true');
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 400px;
+  }
+
+  p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+  }
+
+  div.reservation {
+    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+
+    ul {
+      // width: 355px;
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        padding-top: 40px;
+        text-transform: uppercase;
+        padding-right: 10px;
+      }
+    }
+  }
+
+  div.calendar {
+    width: 355px;
+    height: 255px;
+    background-color: #f7f5f6;
+    margin-top: 40px;
+  }
+
+  div.gallery {
+    padding: 0;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      padding-right: 0;
+      justify-content: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      display: flex;
+
+      li {
+        flex-direction: column;
+
+        img {
+          padding-top: 20px;
+          padding-right: 0;
+          padding-bottom: 10px;
+          width: 250px;
+          height: 250px;
+        }
+      }
+    }
+
+    div.zoom {
+      img {
+        width: 850px;
+        height: 700px;
+        background-size: cover;
+      }
+    }
+  }
+
+  div.buttons {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        // justify-content: space-between;
+
+        img {
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+  }
+}
