@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
 body,
 #root,
 .layout {
@@ -50,5 +52,13 @@ header {
         list-style: none;
       }
     }
+  }
+}
+
+footer {
+  p {
+    font-size: 13px;
+    text-align: center;
+    color: lightgrey;
   }
 }

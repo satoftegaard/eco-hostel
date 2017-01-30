@@ -1,0 +1,39 @@
+.profile {
+  section {
+    margin-top: 0;
+  }
+}
+
+ul.sec-buttons {
+  list-style: none;
+  float: right;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  li {
+
+    img {
+    }
+  }
+}
+
+div.upcoming {
+  padding-top: 60px;
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    a {
+      color: #224a46;
+      text-decoration: none;
+    }
+  }
+}
+
+a:hover {
+  font-weight: bold;
+}

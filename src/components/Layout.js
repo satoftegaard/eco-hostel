@@ -30,6 +30,9 @@ class Layout extends Component {
       <main>
         {this.props.children}
       </main>
+      <footer>
+        <p>&copy; 2017 Eco Hostel. Built with &hearts; at The Iron Yard, in St. Pete, FL</p>
+      </footer>
     </div>
   }
 }
