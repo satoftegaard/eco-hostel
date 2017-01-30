@@ -16,6 +16,16 @@ class Profile extends Component {
         <img src='https://github.com/satoftegaard/eco-hostel/blob/master/upcomingtrip.jpg?raw=true' alt='You have one upcoming trip!' />
         <p><a href='#'>Cancel</a> | <a href='#'>edit</a></p>
       </div>
+      <p>While you’re there, make sure to check out...</p>
+      <div className='sections'>
+        <ul>
+          <li><button>VOLUNTEER TIMES</button></li>
+          <li><button>EVENTS</button></li>
+          <li><button>CLASSES</button></li>
+          <li><button>RULES</button></li>
+        </ul>
+
+      </div>
     </div>
   }
 }

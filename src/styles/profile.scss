@@ -13,7 +13,6 @@ ul.sec-buttons {
   flex-direction: column;
 
   li {
-
     img {
     }
   }
@@ -36,4 +35,45 @@ div.upcoming {
 
 a:hover {
   font-weight: bold;
+}
+
+p {
+  align-content: center;
+  align-items: center;
+}
+
+div.sections {
+
+  ul {
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+    display: flex;
+
+    li {
+      margin: 5px;
+      flex-direction: column;
+
+      button {
+        border-style: none;
+        font-size: 18px;
+        color: white;
+        background-color: #75c299;
+        border-radius: 4px;
+        border-color: #75c299;
+        font-weight: 700;
+        font-family: 'Roboto', sans-serif;
+        letter-spacing: 1px;
+        padding: .5em;
+      }
+    }
+  }
+}
+
+footer {
+  p {
+    align-content: center;
+  }
 }

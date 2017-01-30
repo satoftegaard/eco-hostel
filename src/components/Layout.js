@@ -19,10 +19,10 @@ class Layout extends Component {
     return <div className={`layout ${this.layoutClassName()}`}>
       <header>
         <nav>
-          <h1><Link to='home' /></h1>
+          <h1><Link to='/'><img src='https://github.com/satoftegaard/eco-hostel/blob/master/src/logo.png?raw=true' /></Link></h1>
           <ul className='nav'>
             <li>
-              <Link to='/profile'><img src='https://github.com/satoftegaard/eco-hostel/blob/master/profile.gif?raw=true' /></Link>
+              <Link to='/profile'><img src='https://github.com/satoftegaard/eco-hostel/blob/master/profile-icon_06.png?raw=true' /></Link>
             </li>
           </ul>
         </nav>

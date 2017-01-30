@@ -12,12 +12,14 @@ body,
 }
 
 h1 {
-  background-image: url('https://github.com/satoftegaard/eco-hostel/blob/master/src/logo.png?raw=true');
+  // background-image: url('https://github.com/satoftegaard/eco-hostel/blob/master/src/logo.png?raw=true');
   height: 800px;
   width: 350px;
 }
 
 header {
+  // max-width: 850px;
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -32,15 +34,14 @@ header {
       padding-left: 0;
       list-style: none;
       flex-direction: row;
-      font-family: 'helvetica', sans-serif;
+      font-family: 'Roboto', sans-serif;
       font-size: 24px;
       display: flex;
 
       li {
-        background-image: url('https://github.com/satoftegaard/eco-hostel/blob/master/profile.gif?raw=true');
         background-repeat: no-repeat;
         margin-top: 3em;
-        height: 75px;
+        height: 70px;
         width: 70px;
         padding-right: 50px;
       }
