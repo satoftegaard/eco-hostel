@@ -43,7 +43,6 @@ p {
 }
 
 div.sections {
-
   ul {
     list-style: none;
     padding: 0;
@@ -62,18 +61,23 @@ div.sections {
         color: white;
         background-color: #75c299;
         border-radius: 4px;
-        border-color: #75c299;
+        border: thin solid #75c299;
         font-weight: 700;
         font-family: 'Roboto', sans-serif;
         letter-spacing: 1px;
-        padding: .5em;
+        padding: 0.5em;
+
+        &:hover {
+          background-color: white;
+          color: #75c299;
+        }
       }
     }
   }
 }
 
-footer {
+div.make-sure {
   p {
-    align-content: center;
+    text-align: center;
   }
 }

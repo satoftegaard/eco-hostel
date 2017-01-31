@@ -55,7 +55,6 @@ main {
     justify-content: space-between;
     flex-wrap: wrap;
     display: flex;
-    padding-top: 70px;
     border: lightgrey;
     border-radius: 4px;
     border-style: solid;
@@ -64,7 +63,47 @@ main {
     margin-top: 4em;
     padding: 20px;
 
-    ul {
+    input[type=number] {
+      margin-left: 10px;
+      border: none;
+      border-bottom: 1px solid #224a46;
+      width: 4em;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      padding-bottom: 1px;
+
+      &:focus {
+        outline: none;
+        border-bottom: 2px solid #224a46;
+        padding-bottom: 0;
+      }
+    }
+
+    .roomType {
+      ul {
+        margin-top: 1em;
+        display: flex;
+        padding-left: 0;
+
+        li {
+          display: flex;
+          text-transform: lowercase;
+        }
+      }
+    }
+
+    .checkbox {
+      border: 2px solid #75c299;
+      width: 1em;
+      height: 1em;
+      line-height: 0.8em;
+      text-align: center;
+      margin-right: 10px;
+    }
+
+    ul.details {
       // width: 355px;
       list-style: none;
       padding-left: 0;
@@ -74,7 +113,7 @@ main {
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
         font-size: 18px;
-        padding-top: 30px;
+        margin-bottom: 30px;
         text-transform: uppercase;
         padding-right: 10px;
         color: #224a46;
@@ -88,45 +127,53 @@ main {
     background-color: #f7f5f6;
     margin-top: 15px;
   }
+}
 
-  div.gallery {
-    padding: 0;
+div.gallery {
+  // background-image: url('https://github.com/satoftegaard/eco-hostel/blob/master/geometry_@2X.png?raw=true');
+  padding: 0;
 
-    p {
-      padding-top: 30px;
-      color: #224a46;
-      font-weight: 700;
-    }
+  p {
+    padding-top: 30px;
+    color: #224a46;
+    font-weight: 700;
+  }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
-      padding-right: 0;
-      justify-content: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      display: flex;
+  ul {
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
 
-      li {
-        flex-direction: column;
+    li {
+      flex-direction: column;
+      padding: 0 10px;
 
-        img {
-          // padding-top: 50px;
-          padding-right: 0;
-          padding-bottom: 10px;
-          width: 250px;
-          height: 250px;
-        }
-      }
-    }
-
-    div.zoom {
       img {
-        width: 850px;
-        height: 700px;
-        background-size: cover;
-        padding-top: 20px;
+        // padding-top: 50px;
+        padding-right: 0;
+        padding-bottom: 10px;
+        width: 250px;
+        height: 250px;
       }
+    }
+  }
+
+  div.zoom {
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      font-size: 1.5em;
+      height: 100px;
+      width: 40px;
+      background-color: #75c299;
+      border: none;
+      color: white;
     }
   }
 

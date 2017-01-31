@@ -1,11 +1,6 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
 
 class Layout extends Component {
-
-  static propTypes = {
-    children: React.PropTypes.element.isRequired
-  }
 
   layoutClassName () {
     if (this.props.location.pathname === '/') {
@@ -17,19 +12,7 @@ class Layout extends Component {
 
   render () {
     return <div className={`layout ${this.layoutClassName()}`}>
-      <header>
-        <nav>
-          <h1><Link to='/'><img src='https://github.com/satoftegaard/eco-hostel/blob/master/src/logo.png?raw=true' /></Link></h1>
-          <ul className='nav'>
-            <li>
-              <Link to='/profile'><img src='https://github.com/satoftegaard/eco-hostel/blob/master/profile-icon_06.png?raw=true' /></Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        {this.props.children}
-      </main>
+      {this.props.children}
       <footer>
         <p>&copy; 2017 Eco Hostel. Built with &hearts; at The Iron Yard, in St. Pete, FL</p>
       </footer>
