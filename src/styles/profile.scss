@@ -4,6 +4,30 @@
   }
 }
 
+header {
+  nav {
+    div {
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      // align-items: center;
+      // align-content: center;
+      // justify-content: center;
+      margin-right: auto;
+      margin-top: 30vh;
+
+      img {
+        width: 400px;
+        height: 400px;
+        // padding-right: 10vw;
+        // align-content: center;
+        // justify-content: center;
+      }
+    }
+  }
+}
+
 ul.sec-buttons {
   list-style: none;
   float: right;

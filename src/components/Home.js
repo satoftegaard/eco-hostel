@@ -20,7 +20,6 @@ class Home extends Component {
         </div>
       </main>
       <div className='gallery'>
-        <p>Property Gallery</p>
         <ul>
           <li><img src='https://scontent.ftpa1-1.fna.fbcdn.net/v/t1.0-9/15622139_1633114333649274_1830936517661733639_n.jpg?oh=eb5afcafd4a168edb0ce57a87e168aa5&oe=59498EF9' /></li>
           {/* <div className='info-container' /> */}
