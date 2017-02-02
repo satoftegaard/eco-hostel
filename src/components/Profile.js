@@ -1,25 +1,26 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import data from '../data.json'
+// import data from '../data.json'
 // import Header from './Header'
 
 class Profile extends Component {
 
-  componentDidMount () {
-    if (!this.props.params.slug) {
-      this.props.router.push('/menu/' + data.menu[0].slug)
-    }
-  }
+  // componentDidMount () {
+  //   if (!this.props.params.slug) {
+  //     this.props.router.push('/menu/' + data.menu[0].slug)
+  //   }
+  // }
+
+  // render () {
+  //   const categories = data.menu.map((category, i) => {
+  //     return <li key={i}>
+  //       <Link to={`/menu/${category.slug}`} activeClassName='active'>
+  //         {category.name}
+  //       </Link>
+  //     </li>
+  //   })
 
   render () {
-    const categories = data.menu.map((category, i) => {
-      return <li key={i}>
-        <Link to={`/menu/${category.slug}`} activeClassName='active'>
-          {category.name}
-        </Link>
-      </li>
-    })
-
     return <div>
       <header>
         <nav>
@@ -34,6 +35,11 @@ class Profile extends Component {
         </nav>
       </header>
       <main>
+        <div className='contact'>
+          <h1>MY CONTACT INFO</h1>
+          <p>Email</p>
+          <p>Phone number</p>
+        </div>
         <div className='upcoming'>
           <img src='https://github.com/satoftegaard/eco-hostel/blob/master/upcomingtrip.jpg?raw=true' alt='You have one upcoming trip!' />
           <p><a href='#'>Cancel</a> | <a href='#'>edit</a></p>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Icon from './Icon'
+import RangeCalendar from 'rc-calendar/lib/RangeCalendar'
 
 class Reservation extends Component {
 
@@ -8,6 +9,14 @@ class Reservation extends Component {
     toDate: '',
     guestCount: 1,
     typeOfRoom: 'single'
+  }
+
+  _dateSelected = (dates) => {
+    const [fromDate, toDate] = dates
+    this.setState({
+      fromDate: toDate.format(),
+      toDate: fromDate.format()
+    })
   }
 
   render () {
@@ -20,6 +29,7 @@ class Reservation extends Component {
           <input type='number' min={1} max={8} value={this.state.guestCount} onChange={(e) => this.setState({guestCount: e.target.value})} />
         </li>
         <li>When</li>
+        <RangeCalendar onSelect={this._dateSelected} />
         <li className='roomType'>
           Type of Room
           <ul>
@@ -35,7 +45,6 @@ class Reservation extends Component {
           </ul>
         </li>
       </ul>
-      <div className='calendar' />
     </div>
   }
 }
