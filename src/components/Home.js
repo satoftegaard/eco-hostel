@@ -17,6 +17,12 @@ class Home extends Component {
           </ul>
           <p>Offering classes in cooking, music, art, yoga, gardening, permaculture, hydroponics, languages, and sustainability. Looking to be an educational center for sustainability and simple living, while providing travelers an opportunity to connect with our local community through classes & tours. <br />We plan to offer workshops during our construction to teach others about the sustainable technology that we will be using, including (solar electric, solar hot water, geothermal heating & air conditioning, rain water collection for bathroom and gardening uses, edible landscaping, led lighting, etc...) We are looking to be LEED Platinum Certified.</p>
           <Reservation />
+          <div className='buttons'>
+            <ul>
+              <li><button>Request Booking</button></li>
+              <li><button>Book Now</button></li>
+            </ul>
+          </div>
         </div>
       </main>
       <div className='gallery'>
@@ -29,12 +35,6 @@ class Home extends Component {
         <div className='zoom' style={{backgroundImage: 'url(https://scontent.ftpa1-1.fna.fbcdn.net/v/t1.0-9/15622139_1633114333649274_1830936517661733639_n.jpg?oh=eb5afcafd4a168edb0ce57a87e168aa5&oe=59498EF9)'}}>
           <button className='prev'><Icon glyph='chevron-left' /></button>
           <button className='next'><Icon glyph='chevron-right' /></button>
-        </div>
-        <div className='buttons'>
-          <ul>
-            <li><a href='#'><img src='https://github.com/satoftegaard/eco-hostel/blob/master/request-btn.jpg?raw=true' /></a></li>
-            <li><a href='#'><img src='https://github.com/satoftegaard/eco-hostel/blob/master/book-now-btn.jpg?raw=true' /></a></li>
-          </ul>
         </div>
       </div>
     </div>

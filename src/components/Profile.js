@@ -1,10 +1,25 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import data from '../data.json'
 // import Header from './Header'
 
 class Profile extends Component {
 
+  componentDidMount () {
+    if (!this.props.params.slug) {
+      this.props.router.push('/menu/' + data.menu[0].slug)
+    }
+  }
+
   render () {
+    const categories = data.menu.map((category, i) => {
+      return <li key={i}>
+        <Link to={`/menu/${category.slug}`} activeClassName='active'>
+          {category.name}
+        </Link>
+      </li>
+    })
+
     return <div>
       <header>
         <nav>
@@ -18,14 +33,6 @@ class Profile extends Component {
           {this.props.children}
         </nav>
       </header>
-      {/* <Header>
-        <h2>HI</h2>
-        <div><img src='https://github.com/satoftegaard/eco-hostel/blob/master/Me.png?raw=true' alt='profilephoto' /></div>
-        <ul className='sec-buttons'>
-          <li><img src='https://github.com/satoftegaard/eco-hostel/blob/master/my-docs_07.jpg?raw=true' /></li>
-          <li><img src='https://github.com/satoftegaard/eco-hostel/blob/master/reminders-btn.jpg?raw=true' /></li>
-        </ul>
-      </Header> */}
       <main>
         <div className='upcoming'>
           <img src='https://github.com/satoftegaard/eco-hostel/blob/master/upcomingtrip.jpg?raw=true' alt='You have one upcoming trip!' />
@@ -34,7 +41,7 @@ class Profile extends Component {
         <div className='make-sure'>
           <p>While you’re there, make sure to check out...</p>
         </div>
-        <div className='sections'>
+        <div className='categories'>
           <ul>
             <li><button>VOLUNTEER TIMES</button></li>
             <li><button>EVENTS</button></li>

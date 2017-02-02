@@ -5,6 +5,8 @@ import Layout from './Layout'
 import Home from './Home'
 import Profile from './Profile'
 import ProfileDocs from './ProfileDocs'
+import ProfileMenu from './ProfileMenu'
+import ProfileItem from './ProfileItem'
 
 class App extends Component {
 
@@ -15,6 +17,8 @@ class App extends Component {
         <Route path='profile' component={Profile} />
         <Route path=':slug' component={ProfileDocs} />
       </Route>
+      <Route path='/profilemenu' component={ProfileMenu} />
+      <Route path='/profileitem' component={ProfileItem} />
     </Router>
   }
 }
