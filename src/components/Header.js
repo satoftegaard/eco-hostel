@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import SessionButton from './SessionButton'
 
 class Header extends Component {
 
@@ -13,6 +14,7 @@ class Header extends Component {
           </li>
         </ul>
         {this.props.children}
+        <SessionButton />
       </nav>
     </header>
   }

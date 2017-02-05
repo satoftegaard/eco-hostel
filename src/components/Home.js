@@ -17,12 +17,12 @@ class Home extends Component {
           </ul>
           <p>Offering classes in cooking, music, art, yoga, gardening, permaculture, hydroponics, languages, and sustainability. Looking to be an educational center for sustainability and simple living, while providing travelers an opportunity to connect with our local community through classes & tours. <br />We plan to offer workshops during our construction to teach others about the sustainable technology that we will be using, including (solar electric, solar hot water, geothermal heating & air conditioning, rain water collection for bathroom and gardening uses, edible landscaping, led lighting, etc...) We are looking to be LEED Platinum Certified.</p>
           <Reservation />
-          <div className='buttons'>
+          {/* <div className='buttons'>
             <ul>
               <li><button>Request Booking</button></li>
               <li><button>Book Now</button></li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </main>
       <div className='gallery'>

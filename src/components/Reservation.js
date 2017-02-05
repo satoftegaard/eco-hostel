@@ -21,7 +21,7 @@ class Reservation extends Component {
 
   render () {
     const { typeOfRoom } = this.state
-    return <div className='reservation'>
+    return <container><div className='reservation'>
       <ul className='details'>
         <li><Icon glyph='map-marker' /> 302 15th St. N, St. Petersburg, FL 33712</li>
         <li>
@@ -46,6 +46,13 @@ class Reservation extends Component {
         </li>
       </ul>
     </div>
+      <div className='buttons'>
+        <ul>
+          <li><button>Request Booking</button></li>
+          <li><button>Book Now</button></li>
+        </ul>
+      </div>
+    </container>
   }
 }
 
