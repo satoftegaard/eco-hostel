@@ -26,6 +26,10 @@ header {
       }
     }
   }
+
+  &SessionButton {
+    border-style: none;
+  }
 }
 
 ul.sec-buttons {
@@ -37,7 +41,7 @@ ul.sec-buttons {
   flex-direction: column;
 
   li {
-    img {
+  img {
     }
   }
 }

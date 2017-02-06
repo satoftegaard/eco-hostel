@@ -59,6 +59,10 @@ class Auth {
     browserHistory.push('/')
   }
 
+  get picture () {
+    return this.profile.picture_large || this.profile.picture
+  }
+
   @computed get isSignedIn () { return !!this.token }
 }
 

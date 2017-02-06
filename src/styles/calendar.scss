@@ -1,6 +1,44 @@
 @import '~rc-calendar/assets/index';
 
 .rc-calendar-selected-day .rc-calendar-date {
-  background-color: rebeccapurple;
-  color: lime;
+  background-color: #75c299;
+  color: white;
+  font-weight: bold;
+
+ //  &-date-panel &-panel {
+ //    position: relative;
+ //    outline: none;
+ //  }
+ //
+ //  &-week-number {
+ //    width: 286px;
+ //
+ //    &-cell {
+ //      text-align: center;
+ //    }
+ //  }
+ //
+ //  &-selected-day &-date {
+ //   background: tint(#75c299, 80%);
+ // }
+ //
+ // &-selected-date &-date {
+ //   background: #3fc7fa;
+ //   color: #fff;
+ //   &:hover {
+ //     background: #3fc7fa;
+ //   }
+ // }
+ //
+ //  &-header {
+ //    padding: 0 10px;
+ //    height: 34px;
+ //    line-height: 30px;
+ //    text-align: center;
+ //    user-select: none;
+ //    -webkit-user-select: none;
+ //    border-bottom: 1px solid #ccc;
+ //
+ //  .rc-calendar-input {
+ //      font-size: 25px;
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 import withAuth from '../utils/withAuth'
 
 @withAuth
@@ -11,11 +12,21 @@ class SessionButton extends Component {
       : auth.signIn()
   }
 
+  signedIn () {
+    return <Link to='/profile'>
+      <img src={this.props.auth.picture} width={60} />
+    </Link>
+  }
+
+  signedOut () {
+    return <button className='session' onClick={this.handleClick}>
+      <img src='https://github.com/satoftegaard/eco-hostel/blob/master/profile-icon_06.png?raw=true' />
+    </button>
+  }
+
   render () {
     const { auth } = this.props
-    return <button onClick={this.handleClick}>
-      {auth.isSignedIn ? 'Sign Out' : 'Sign In'}
-    </button>
+    return auth.isSignedIn ? this.signedIn() : this.signedOut()
   }
 }
 

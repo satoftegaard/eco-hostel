@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import withAuth from '../utils/withAuth'
 // import data from '../data.json'
 // import Header from './Header'
 
+@withAuth
 class Profile extends Component {
 
   // componentDidMount () {
@@ -25,7 +27,7 @@ class Profile extends Component {
       <header>
         <nav>
           <h1><Link to='/'><img src='https://github.com/satoftegaard/eco-hostel/blob/master/src/logo.png?raw=true' /></Link></h1>
-          <div><img src='https://github.com/satoftegaard/eco-hostel/blob/master/Me.png?raw=true' alt='profilephoto' /></div>
+          <div><img src={this.props.auth.picture} alt='profilephoto' /></div>
           <ul className='nav'>
             <li>
               <Link to='/profile'><img src='https://github.com/satoftegaard/eco-hostel/blob/master/profile-icon_06.png?raw=true' /></Link>
