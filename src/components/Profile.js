@@ -5,6 +5,7 @@ import withAuth from '../utils/withAuth'
 // import Header from './Header'
 
 @withAuth
+// component within a component
 class Profile extends Component {
 
   // componentDidMount () {

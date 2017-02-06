@@ -18,14 +18,11 @@ h1 {
 }
 
 header {
-  // max-width: 850px;
-
   nav {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     height: 780px;
-    // align-items: center;
     background-image: url('https://github.com/satoftegaard/eco-hostel/blob/master/src/map.png?raw=true');
     background-repeat: no-repeat;
     background-size: cover;
