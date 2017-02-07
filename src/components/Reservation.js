@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Icon from './Icon'
+import { browserHistory } from 'react-router'
 import RangeCalendar from 'rc-calendar/lib/RangeCalendar'
 import withAuth from '../utils/withAuth'
 
@@ -37,7 +38,7 @@ class Reservation extends Component {
     }).then((response) => {
       return response.json()
     }).then((data) => {
-      console.log('response', data)
+      browserHistory.push('/profile')
     })
   }
 

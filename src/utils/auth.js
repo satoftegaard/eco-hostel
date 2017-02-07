@@ -60,10 +60,11 @@ class Auth {
   }
 
   get picture () {
+    console.log(this.profile)
     return this.profile.picture_large || this.profile.picture
   }
 
-  @computed get isSignedIn () { return !!this.token }
+  @computed get isSignedIn () { return this.token && this.profile }
 }
 
 const auth = new Auth()
