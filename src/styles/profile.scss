@@ -6,17 +6,13 @@
 
 header {
   nav {
-    div {
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      margin-right: auto;
-      margin-top: 30vh;
-
+    div.photo {
+      position: absolute;
+      left: calc(50% - 350px / 2);
+      top: 215px;
       img {
-        width: 400px;
-        height: 400px;
+        width: 350px;
+        height: 350px;
         border-radius: 50%;
         border-color: white;
         border: 13px solid rgba(255,255,255,0.5);
@@ -83,7 +79,6 @@ div.categories {
     list-style: none;
     padding: 0;
     justify-content: center;
-    // justify-content: space-between;
     flex-wrap: wrap;
     display: flex;
 
@@ -91,7 +86,7 @@ div.categories {
       margin: 5px;
       flex-direction: column;
 
-      button {
+      a {
         border-style: none;
         font-size: 18px;
         color: white;
@@ -103,7 +98,15 @@ div.categories {
         letter-spacing: 1px;
         padding: 0.5em;
 
-        &:hover {
+        &:link,
+        &:visited {
+          text-decoration: none;
+        }
+
+        &:focus,
+        &:hover,
+        &:active,
+        &.active {
           background-color: white;
           color: #75c299;
         }

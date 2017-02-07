@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import Icon from './Icon'
 import RangeCalendar from 'rc-calendar/lib/RangeCalendar'
+import withAuth from '../utils/withAuth'
 
+@withAuth
 class Reservation extends Component {
 
   state = {
@@ -18,6 +20,45 @@ class Reservation extends Component {
       toDate: fromDate.format()
     })
   }
+
+  _requestBooking = () => {
+    const url = 'http://ecohostelapi.azurewebsites.net/api/Reservation'
+    window.fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.props.auth.token
+      },
+      body: JSON.stringify({
+        ...this.state,
+        name: this.props.auth.profile.name,
+        email: this.props.auth.profile.email
+      })
+    }).then((response) => {
+      return response.json()
+    }).then((data) => {
+      console.log('response', data)
+    })
+  }
+
+  // construtor () {
+  //   super()
+  //   this.state = {
+  //     name: '',
+  //     items: []
+  //   }
+  // }
+  //
+  // componentDidMount () {
+  //   const url = 'http://ecohostelapi.azurewebsites.net/api/Reservation'
+  //   window.fetch.(url).then((response) => {
+  //     return response.json()
+  //   }).then((data => {
+  //     this.setState({
+  //       items: data
+  //     })
+  //   })
+  // }
 
   render () {
     const { typeOfRoom } = this.state
@@ -48,8 +89,11 @@ class Reservation extends Component {
     </div>
       <div className='buttons'>
         <ul>
-          <li><button>Request Booking</button></li>
-          <li><button>Book Now</button></li>
+          <li>{
+            this.props.auth.isSignedIn
+             ? <button onClick={this._requestBooking}>Request Booking</button>
+             : <button onClick={() => this.props.auth.signIn()}>Sign In</button>
+          }</li>
         </ul>
       </div>
     </container>

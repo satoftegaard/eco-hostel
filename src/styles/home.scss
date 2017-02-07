@@ -53,6 +53,7 @@ main {
   div.reservation {
     justify-content: center;
     justify-content: space-between;
+    flex-direction: column;
     flex-wrap: wrap;
     display: flex;
     border: lightgrey;
@@ -62,8 +63,14 @@ main {
     box-shadow: 1px 1px 10px lightgrey;
     margin-top: 4em;
     padding: 20px;
+    width: auto;
 
     input[type=number] {
+      justify-content: center;
+      justify-content: space-between;
+      flex-direction: column;
+      flex-wrap: wrap;
+      display: flex;
       margin-left: 10px;
       border: none;
       border-bottom: 1px solid #224a46;
@@ -76,7 +83,7 @@ main {
 
       &:focus {
         outline: none;
-        border-bottom: 2px solid #224a46;
+        border-bottom: 2px solid #75c299;
         padding-bottom: 0;
       }
     }
@@ -89,13 +96,14 @@ main {
 
         li {
           display: flex;
-          text-transform: lowercase;
+          // text-transform: lowercase;
         }
       }
     }
 
     .checkbox {
       border: 2px solid #75c299;
+      border-radius: 4px;
       width: 1em;
       height: 1em;
       line-height: 0.8em;
@@ -110,22 +118,17 @@ main {
       padding-top: 0;
 
       li {
+        flex-wrap: wrap;
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
         font-size: 18px;
         margin-bottom: 30px;
-        text-transform: uppercase;
         padding-right: 10px;
         color: #224a46;
+        align-items: center;
+
       }
     }
-  }
-
-  div.calendar {
-    width: 355px;
-    height: 255px;
-    background-color: #f7f5f6;
-    margin-top: 15px;
   }
 
   div.buttons {
@@ -145,6 +148,11 @@ main {
       padding-top: 30px;
 
       button {
+        justify-content: center;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-wrap: wrap;
+        display: flex;
         border-style: none;
         font-size: 18px;
         color: white;
@@ -167,15 +175,20 @@ main {
 }
 
 div.gallery {
-  // background-image: url('https://github.com/satoftegaard/eco-hostel/blob/master/geometry_@2X.png?raw=true');
   padding: 0;
   padding-top: 40px;
+  // justify-content: center;
+  // justify-content: space-between;
+  // flex-direction: column;
+  // flex-wrap: wrap;
+  // display: flex;
 
   ul {
     list-style: none;
     justify-content: center;
     flex-wrap: wrap;
     display: flex;
+    // margin-top: 30em;
 
     li {
       flex-direction: column;
@@ -192,7 +205,7 @@ div.gallery {
   }
 
   div.zoom {
-    height: 450px;
+    height: 500px;
     background-size: cover;
     background-position: center;
     display: flex;

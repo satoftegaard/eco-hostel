@@ -4,41 +4,53 @@
   background-color: #75c299;
   color: white;
   font-weight: bold;
+}
 
- //  &-date-panel &-panel {
- //    position: relative;
- //    outline: none;
- //  }
- //
- //  &-week-number {
- //    width: 286px;
- //
- //    &-cell {
- //      text-align: center;
- //    }
- //  }
- //
- //  &-selected-day &-date {
- //   background: tint(#75c299, 80%);
- // }
- //
- // &-selected-date &-date {
- //   background: #3fc7fa;
- //   color: #fff;
- //   &:hover {
- //     background: #3fc7fa;
- //   }
- // }
- //
- //  &-header {
- //    padding: 0 10px;
- //    height: 34px;
- //    line-height: 30px;
- //    text-align: center;
- //    user-select: none;
- //    -webkit-user-select: none;
- //    border-bottom: 1px solid #ccc;
- //
- //  .rc-calendar-input {
- //      font-size: 25px;
+.rc-calendar {
+  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  display: flex;
+  border: none;
+  border-style: none;
+  box-shadow: none;
+  // line-height: 3px;
+  margin-top: -10px;
+}
+
+.rc-calendar-input {
+  font-size: 18px;
+  line-height: 5px;
+  color: #224a46;
+  text-align: center;
+}
+
+.rc-calendar-date:hover {
+  background: #75c299;
+  color: white;
+}
+
+.rc-calendar-range .rc-calendar-in-range-cell {
+  background: #daf4e6;
+}
+
+.rc-calendar-today .rc-calendar-date {
+  border: 1px solid #224a46;
+}
+
+.rc-calendar-selected-date .rc-calendar-date {
+  background: #75c299;
+}
+
+.rc-calendar-year-select:hover, .rc-calendar-month-select:hover, .rc-calendar-day-select:hover {
+  color: #75c299;
+}
+
+.rc-calendar-prev-month-btn:hover, .rc-calendar-next-month-btn:hover, .rc-calendar-prev-year-btn:hover, .rc-calendar-next-year-btn:hover {
+  color: #75c299;
+}
+
+.rc-calendar-today-btn, .rc-calendar-ok-btn, .rc-calendar-time-picker-btn {
+  color: #75c299;
 }

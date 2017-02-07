@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import SessionButton from './SessionButton'
 import withAuth from '../utils/withAuth'
 // import data from '../data.json'
 // import Header from './Header'
@@ -22,26 +23,42 @@ class Profile extends Component {
   //       </Link>
   //     </li>
   //   })
+  updatePhoto () {
+    console.log('getting photo')
+    if (this.props.auth.isSignedIn) {
+      return (
+        <img src={this.props.auth.picture} alt='profilephoto' />
+      )
+    }
+    return (
+      <img src='' alt='profilephoto' />
+    )
+  }
 
   render () {
     return <div>
       <header>
         <nav>
           <h1><Link to='/'><img src='https://github.com/satoftegaard/eco-hostel/blob/master/src/logo.png?raw=true' /></Link></h1>
-          <div><img src={this.props.auth.picture} alt='profilephoto' /></div>
+          <div className='photo'>{this.updatePhoto()}</div>
+          {/* <div><img src={this.props.auth.picture} alt='profilephoto' /></div> */}
           <ul className='nav'>
             <li>
-              <Link to='/profile'><img src='https://github.com/satoftegaard/eco-hostel/blob/master/profile-icon_06.png?raw=true' /></Link>
+              <SessionButton />
             </li>
           </ul>
-          {this.props.children}
         </nav>
       </header>
       <main>
         <div className='contact'>
+          {/* <form id='contact' method='post'> */}
           <h1>MY CONTACT INFO</h1>
           <p>Email</p>
           <p>Phone number</p>
+          {/* <fieldset><input placeholder="Your name" type="text" tabindex="1" required autofocus>
+          <fieldset>
+              <input placeholder="Your Email Address" type="email" tabindex="2" required>
+          </fieldset> */}
         </div>
         <div className='upcoming'>
           <img src='https://github.com/satoftegaard/eco-hostel/blob/master/upcomingtrip.jpg?raw=true' alt='You have one upcoming trip!' />
@@ -52,11 +69,12 @@ class Profile extends Component {
         </div>
         <div className='categories'>
           <ul>
-            <li><button>VOLUNTEER TIMES</button></li>
-            <li><button>EVENTS</button></li>
-            <li><button>CLASSES</button></li>
-            <li><button>RULES</button></li>
+            <li><Link activeClassName='active' to='/profile/volunteer'>VOLUNTEER TIMES</Link></li>
+            <li><Link activeClassName='active' to='/profile/events'>EVENTS</Link></li>
+            <li><Link activeClassName='active' to='/profile/classes'>CLASSES</Link></li>
+            <li><Link activeClassName='active' to='/profile/rules'>RULES</Link></li>
           </ul>
+          {this.props.children}
         </div>
       </main>
     </div>
