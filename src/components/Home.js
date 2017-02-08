@@ -5,8 +5,9 @@ import Icon from './Icon'
 
 const IMAGES = [
   'https://scontent.ftpa1-1.fna.fbcdn.net/v/t1.0-9/15622139_1633114333649274_1830936517661733639_n.jpg?oh=eb5afcafd4a168edb0ce57a87e168aa5&oe=59498EF9',
-  'https://scontent.ftpa1-1.fna.fbcdn.net/v/t1.0-9/16195892_1648095895484451_7314084950253886820_n.jpg?oh=75722d2def26b10fbdebfa1a630bddb4&oe=59114268',
-  'https://scontent.ftpa1-1.fna.fbcdn.net/v/t1.0-9/16387126_1648095842151123_6861152548960249353_n.jpg?oh=a20f543b3607ce8ed932bcc7f6ae0cba&oe=59455334'
+  'https://github.com/satoftegaard/eco-hostel/blob/master/0jw6_7hy-rm-samuel-zeller.jpg?raw=true',
+  'https://github.com/satoftegaard/eco-hostel/blob/master/rm5dbquteoy-lauren-mancke.jpg?raw=true',
+  'https://github.com/satoftegaard/eco-hostel/blob/master/xj0isuqt9ys-brooke-cagle.jpg?raw=true'
 ]
 
 class Home extends Component {

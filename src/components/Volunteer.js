@@ -16,22 +16,22 @@ class Volunteer extends Component {
     return <section className='volunteer'>
       <p>Volunteer Schedule</p>
       <ul>
-        <li><h1>Farm Day</h1></li>
+        <li><b>Farm Day</b></li>
         <li>St. Pete Eco-Hostel</li>
-        <li>February 2, 2017 4:00pm</li>
+        <li>February 2, 2017 - 4:00pm</li>
       </ul>
       <ul>
-        <li>Cook for your Hostelmates!</li>
+        <li><b>Cook for your Hostelmates!</b></li>
         <li>St. Pete Eco-Hostel</li>
-        <li>February 19, 2017 4:00pm</li>
+        <li>February 19, 2017 - 4:00pm</li>
       </ul>
       <ul>
-        <li>Farm Day</li>
+        <li><b>Farm Day</b></li>
         <li>St. Pete Eco-Hostel</li>
-        <li>February 19, 2017 4:00pm</li>
+        <li>February 19, 2017 - 4:00pm</li>
       </ul>
       <ul>
-        <li>Cleaning up the Park</li>
+        <li><b>Cleaning up the Park</b></li>
         <li>Williams Park, St. Pete FL</li>
         <li>February 19, 2017 4:00pm</li>
       </ul>

@@ -50,16 +50,23 @@ class Profile extends Component {
         </nav>
       </header>
       <main>
-        <div className='contact'>
-          {/* <form id='contact' method='post'> */}
-          <h1>MY CONTACT INFO</h1>
-          <p>Email</p>
-          <p>Phone number</p>
-          {/* <fieldset><input placeholder="Your name" type="text" tabindex="1" required autofocus>
-          <fieldset>
-              <input placeholder="Your Email Address" type="email" tabindex="2" required>
-          </fieldset> */}
+        <div className='contactinfo'>
+          <tr>
+            <td><h1>MY CONTACT INFO</h1></td>
+          </tr>
+          <tr>
+            <td><label htmlFor='email'>Email</label></td>
+            <td><input name='email' type='text' /></td>
+          </tr>
+          <tr>
+            <td><label htmlFor='phone'>Phone number</label></td>
+            <td><input name='phone' type='text' /></td>
+          </tr>
+          <tr>
+            <button className='save'>SAVE</button>
+          </tr>
         </div>
+        <div className='contact' />
         <div className='upcoming'>
           <img src='https://github.com/satoftegaard/eco-hostel/blob/master/upcomingtrip.jpg?raw=true' alt='You have one upcoming trip!' />
           <p><a href='#'>Cancel</a> | <a href='#'>edit</a></p>
