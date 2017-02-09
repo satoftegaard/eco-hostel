@@ -71,7 +71,7 @@ class Profile extends Component {
   upcoming () {
     if (this.state.found) {
       return <div className='upcoming'>
-        <img src='https://github.com/satoftegaard/eco-hostel/blob/master/upcomingtrip.jpg?raw=true' alt='You have one upcoming trip!' />
+        <img src='https://github.com/satoftegaard/eco-hostel/blob/master/1booking2.5.gif?raw=true' alt='You have one upcoming trip!' />
         <h3>From: {moment(this.state.fromDate).format('MMMM Do YYYY')}</h3>
         <h3>To: {moment(this.state.toDate).format('MMMM Do YYYY')}</h3>
         <h4>A {this.state.typeOfRoom} for {this.state.guestCount} guest(s)</h4>

@@ -43,14 +43,14 @@
   background: #75c299;
 }
 
-.rc-calendar-year-select:hover, .rc-calendar-month-select:hover, .rc-calendar-day-select:hover {
+.rc-calendar-year-select:hover .rc-calendar-month-select:hover .rc-calendar-day-select:hover {
   color: #75c299;
 }
 
-.rc-calendar-prev-month-btn:hover, .rc-calendar-next-month-btn:hover, .rc-calendar-prev-year-btn:hover, .rc-calendar-next-year-btn:hover {
+.rc-calendar-prev-month-btn:hover .rc-calendar-next-month-btn:hover .rc-calendar-prev-year-btn:hover .rc-calendar-next-year-btn:hover {
   color: #75c299;
 }
 
-.rc-calendar-today-btn, .rc-calendar-ok-btn, .rc-calendar-time-picker-btn {
+.rc-calendar-today-btn .rc-calendar-ok-btn .rc-calendar-time-picker-btn {
   color: #75c299;
 }
