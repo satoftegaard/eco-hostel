@@ -58,6 +58,28 @@ div.upcoming {
   display: flex;
   flex-direction: column;
 
+  h3 {
+    line-height: .5px;
+    font-weight: normal;
+  }
+
+  h4 {
+    line-height: -2px;
+  }
+
+  button {
+    border-style: none;
+    font-size: 14px;
+    width: 70px;
+    color: white;
+    background-color: #75c299;
+    border-radius: 4px;
+    border: thin solid #75c299;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1px;
+  }
+
   p {
     a {
       color: #224a46;
@@ -132,7 +154,6 @@ div.contactinfo {
     padding-top: 10px;
 
     button {
-      // padding-top: -20px;
       border-style: none;
       font-size: 14px;
       width: 70px;

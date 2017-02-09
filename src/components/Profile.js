@@ -2,18 +2,25 @@ import React, { Component } from 'react'
 import { Link } from 'react-router'
 import SessionButton from './SessionButton'
 import withAuth from '../utils/withAuth'
-// import data from '../data.json'
-// import Header from './Header'
+import moment from 'moment'
 
 @withAuth
 // component within a component
 class Profile extends Component {
 
-  // componentDidMount () {
-  //   if (!this.props.params.slug) {
-  //     this.props.router.push('/menu/' + data.menu[0].slug)
-  //   }
-  // }
+  state = {
+    email: null,
+    found: false,
+    fromDate: null,
+    guestCount: 0,
+    name: null,
+    toDate: null,
+    typeOfRoom: ''
+  }
+
+  componentDidMount () {
+    this._getBooking()
+  }
 
   // render () {
   //   const categories = data.menu.map((category, i) => {
@@ -33,6 +40,48 @@ class Profile extends Component {
     return (
       <img src='' alt='profilephoto' />
     )
+  }
+
+  _getBooking = () => {
+    const url = 'http://ecohostelapi.azurewebsites.net/api/Reservation'
+    window.fetch(url, {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.props.auth.token
+      }
+    }).then((r) => r.json()).then((data) => {
+      this.setState(data)
+    })
+  }
+
+  _removeBooking = () => {
+    const url = 'http://ecohostelapi.azurewebsites.net/api/Reservation'
+    window.fetch(url, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.props.auth.token
+      }
+    }).then(() => {
+      console.log('removing')
+      this._getBooking()
+    })
+  }
+
+  upcoming () {
+    if (this.state.found) {
+      return <div className='upcoming'>
+        <img src='https://github.com/satoftegaard/eco-hostel/blob/master/upcomingtrip.jpg?raw=true' alt='You have one upcoming trip!' />
+        <h3>From: {moment(this.state.fromDate).format('MMMM Do YYYY')}</h3>
+        <h3>To: {moment(this.state.toDate).format('MMMM Do YYYY')}</h3>
+        <h4>A {this.state.typeOfRoom} for {this.state.guestCount} guest(s)</h4>
+        <p><button onClick={this._removeBooking}>Cancel</button></p>
+      </div>
+    } else {
+      return <div className='upcoming'>
+        <h2>You have no upcoming trips planned. :(</h2>
+      </div>
+    }
   }
 
   render () {
@@ -56,7 +105,7 @@ class Profile extends Component {
           </tr>
           <tr>
             <td><label htmlFor='email'>Email</label></td>
-            <td><input name='email' type='text' /></td>
+            <td><input name='email' type='text' value={this.props.auth.profile.email} /></td>
           </tr>
           <tr>
             <td><label htmlFor='phone'>Phone number</label></td>
@@ -67,10 +116,7 @@ class Profile extends Component {
           </tr>
         </div>
         <div className='contact' />
-        <div className='upcoming'>
-          <img src='https://github.com/satoftegaard/eco-hostel/blob/master/upcomingtrip.jpg?raw=true' alt='You have one upcoming trip!' />
-          <p><a href='#'>Cancel</a> | <a href='#'>edit</a></p>
-        </div>
+        {this.upcoming()}
         <div className='make-sure'>
           <p>While you’re there, make sure to check out...</p>
         </div>

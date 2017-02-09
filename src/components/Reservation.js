@@ -17,8 +17,8 @@ class Reservation extends Component {
   _dateSelected = (dates) => {
     const [fromDate, toDate] = dates
     this.setState({
-      fromDate: toDate.format(),
-      toDate: fromDate.format()
+      toDate: toDate.format(),
+      fromDate: fromDate.format()
     })
   }
 
@@ -38,28 +38,10 @@ class Reservation extends Component {
     }).then((response) => {
       return response.json()
     }).then((data) => {
+      console.log(data)
       browserHistory.push('/profile')
     })
   }
-
-  // construtor () {
-  //   super()
-  //   this.state = {
-  //     name: '',
-  //     items: []
-  //   }
-  // }
-  //
-  // componentDidMount () {
-  //   const url = 'http://ecohostelapi.azurewebsites.net/api/Reservation'
-  //   window.fetch.(url).then((response) => {
-  //     return response.json()
-  //   }).then((data => {
-  //     this.setState({
-  //       items: data
-  //     })
-  //   })
-  // }
 
   render () {
     const { typeOfRoom } = this.state
